@@ -1,4 +1,5 @@
 export async function fetchMeals() {
+    console.log('url: ', import.meta.env.VITE_BACKEND_URL);
     const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/meals`);
 
     if (!response.ok) {
