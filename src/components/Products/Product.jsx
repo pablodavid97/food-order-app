@@ -13,7 +13,7 @@ const Product = ({ product }) => {
         <li className='meal-item'>
             <article>
                 <img
-                    src={`http://localhost:3000/${product.image}`}
+                    src={`${import.meta.env.VITE_BACKEND_URL}/${product.image}`}
                     alt={product.name}
                 />
                 <h3>{product.name}</h3>
