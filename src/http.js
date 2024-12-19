@@ -1,5 +1,4 @@
 export async function fetchMeals() {
-    console.log('url: ', import.meta.env.VITE_BACKEND_URL);
     const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/meals`);
 
     if (!response.ok) {
@@ -8,7 +7,7 @@ export async function fetchMeals() {
 
     const data = await response.json();
 
-    return data;
+    return data.meals;
 }
 
 export async function submitOrder(order) {
@@ -27,5 +26,5 @@ export async function submitOrder(order) {
     }
     const data = await response.json();
 
-    return data;
+    return data.message;
 }
